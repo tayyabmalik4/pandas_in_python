@@ -20,3 +20,7 @@
 # //////to import the pandas
 # /////pd is a short_name of the pandas
 # ***********import pandas as pd
+
+
+# ----------------if you read the documentation than we use this link
+# ------------------https://pandas.pydata.org/docs/getting_started/index.html------------------
