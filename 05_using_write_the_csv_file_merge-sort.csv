@@ -1,22 +1,21 @@
-﻿COURSE CODE,QUESTION NO.,QUESTIONS,A,B,C,D,ANSWER,Date,time
-COMP3112,1,Merge sort uses which of the following technique to implement sorting?,backtracking,greedy algorithm,divide and conquer, dynamic programming,C,yes,NaN
+﻿COURSE CODE,QUESTION NO.,QUESTIONS,A,B,C,D,ANSWER,Date,time,num
+COMP3112,1,Merge sort uses which of the following technique to implement sorting?,backtracking,greedy algorithm,divide and conquer, dynamic programming,C,yes,NaN,13
 COMP3112,2, What is the average case time complexity of merge sort?," O(n log n)
-",O(n2),O(n2 log n),O(n2 log n),A,,No
-COMP3112,3,What is the auxiliary space complexity of merge sort?,O(1),O(log n),O(n),O(n log n),C,,No
-COMP3112,4, What will be the best case time complexity of merge sort?,O(n log n),O(n2),O(n2 log n),O(n log n2),A,,#N/A
-COMP3112,5,which of the following is not a variant of merge sort?, in-place merge sort,bottom up merge sort, top down merge sort,linear merge sort,D,,#N/A N/A
-COMP3112,6,Which of the following is not in place sorting algorithm by default?, quick sort,merge sort,heap sort, insertion sort,A,,#NA
-COMP3112,7,Which of the following sorting algorithm does not use recursion?, quick sort," bottom up merge sort
-",merge sort,heap sort,,yes,-1.#IND
-COMP3112,8,,partitioning,merging,exchanging,,,null,-1.#QNAN
-COMP3112,9, Choose the incorrect statement about merge sort from the following, it is an adaptive algorithm,it is a comparison based sor, it is not an in place algorithm,1.#QNAN,A,yes,-NaN
-COMP3112,10,Which of the following is not a stable sorting algorithm?," Merge sort
-",Cocktail sort, Bubble sort,Quick sort,,yes,-nan
-COMP3112,11," Merge sort can be implemented using O(1) auxiliary space.
-",yes,true ,flase,none of above,1.#IND,yes,N/A
-COMP3112,12, What is the worst case time complexity of merge sort," O(n log n)
+",O(n2),O(n2 log n),O(n2 log n),A,,No,15
+COMP3112,3,What is the auxiliary space complexity of merge sort?,O(1),O(log n),O(n),O(n log n),C,,No,
+COMP3112,, What will be the best case time complexity of merge sort?,O(n log n),O(n2),O(n2 log n),O(n log n2),A,,#N/A,19
+COMP3112,5,which of the following is not a variant of merge sort?, in-place merge sort,bottom up merge sort, top down merge sort,linear merge sort,D,,#N/A N/A,21
+COMP3112,6,Which of the following is not in place sorting algorithm by default?, quick sort,merge sort,heap sort, insertion sort,A,,#NA,23
+COMP3112,,Which of the following sorting algorithm does not use recursion?, quick sort," bottom up merge sort
+",merge sort,heap sort,,yes,-1.#IND,25
+COMP3112,,,partitioning,merging,exchanging,,,null,-1.#QNAN,27
+COMP3112,, Choose the incorrect statement about merge sort from the following, it is an adaptive algorithm,it is a comparison based sor, it is not an in place algorithm,1.#QNAN,A,yes,#NAME?,
+COMP3112,,Which of the following is not a stable sorting algorithm?," Merge sort
+",Cocktail sort, Bubble sort,Quick sort,,yes,#NAME?,31
+COMP3112,11, Merge sort can be,yes,true ,flase,none of above,1.#IND,yes,N/A,
+COMP3112,, What is the worst case time complexity of merge sort," O(n log n)
 ",O(n2)," O(n2 log n)
-", O(n log n2),A,nan,NA
-COMP3112,13, Which of the following sorting algorithm makes use of merge sort?, bogo sort,quick sort, tim sort, intro sort,C,null,NULL
-COMP3112,14,Which of the following sorting algorithm does not use recursion?,quick sort, merge sort,heap sort,bottom up merge sort,D,n/a,No
-COMP3112,15,Merge sort is preferred for arrays over linked lists., true,FALSE,Both,None,B,yes,No
+", O(n log n2),A,nan,NA,35
+COMP3112,13, Which of the following sorting algorithm makes use of merge sort?, bogo sort,quick sort, tim sort, intro sort,C,null,NULL,37
+COMP3112,14,Which of the following sorting algorithm does not use recursion?,quick sort, merge sort,heap sort,bottom up merge sort,D,n/a,No,
+COMP3112,15,Merge sort is preferred for arrays over linked lists., true,FALSE,Both,None,B,yes,No,41
