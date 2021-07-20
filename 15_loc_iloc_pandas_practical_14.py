@@ -1,7 +1,7 @@
 # **************************loc and iloc function using pandas library in python
 # ////syntax---------------print(l.loc[parameters])
-# /////definition------------------Acces the group of rows or colums by label(step by step or decorate form) is called loc fucntion 
-# /////
+# /////loc definition------------------Acces the DataFrame or Series as a string of rows or colums by label(step by step or decorate form) is called loc fucntion 
+# /////iloc definition----------------Acces the DataFrame or Serious as a integers of rows or columns by location(step by step or decorate form) is called iloc function
 
 
 from numpy import dtype
@@ -29,6 +29,7 @@ l=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_us
 
 
 # ************************iloc means (int location)***********
+# ///////we input the data as a integer
 # //////it is provides just interger numbers
 print(l.iloc[[0]])
 
