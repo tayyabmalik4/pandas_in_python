@@ -24,7 +24,7 @@ df2=pd.DataFrame({'ID':[1,2,3,4,5],'Name':['A','B','C','D','E']})
 # print(pd.merge(df1,df2, on='ID', how='left'))
 # ///////using right and outer is same functionality
 # //////right function is return the float values 
-
+# /////inner means intersection and outer means union
 # print(pd.merge(df1,df2, on='ID', how='outer'))
 # print(pd.merge(df1,df2, on='ID', how='right'))
 
