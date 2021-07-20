@@ -29,3 +29,8 @@ print(pd.concat([con2,con3]))
 # /////if we want to concat the dataFrames as columns wise than we use axis function
 # //////rows(0) wise concat is by default
 print(pd.concat([con2,con3], axis=1))
+
+
+# //////when we use axis=0 by default than indexs are different as the DataFrame then
+# -----then if we want to wish that the indexs are behave sequancly than we use ignore_index function
+print(pd.concat([con2,con3],axis=0, ignore_index=True)) 
