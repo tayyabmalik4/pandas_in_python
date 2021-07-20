@@ -43,7 +43,17 @@ df_lst_dict=[{"Name":"Tayyab","Dream":"Sultan's Production"},{"Name":"Junaid","D
 df_ser={"ID":pd.Series([1,2,3,4]),"Name":pd.Series(["Junaid","Zahid","Tayyab","Osama"])}
 print(df_ser)
 print(pd.DataFrame(df_ser))
- 
+
+
+# //////if we want to del the Series or DataFrame than we use del function
+# del df_ser
+# print(df_ser)
+
+
+# ////if we want to rename the DataFrame than we use rename function
+renam=pd.DataFrame({'ID':[1,2,3,4,5],'Name':['A','B','C','D','E']})
+print(renam)
+print(renam.rename(columns={'ID':'IDs'}))
 
 
 
