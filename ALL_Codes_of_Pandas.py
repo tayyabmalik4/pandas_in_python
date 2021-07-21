@@ -225,6 +225,111 @@ print(inter1.interpolate(inplace=True))
 print(inter1)
 
 
+# (15)************************loc and iloc******************************************************
+
+
+l=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(l.loc[5])
+print(l.loc[[1,3,4,5]])
+print(l.loc[4,"DateTime"])
+print(l.loc[1:4,'DateTime'])
+# print(l.loc[l['num']>30,['QUESTION NO.']])
+# print(dtype(l.num))
+print(l.iloc[[0]])
+print(l.iloc[:,3])
+print(l.iloc[[2,3,4]])
+
+
+# (16)********************Groupby function*****************************************************
+
+group=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(group)
+gr=group.groupby(by='ANSWER')
+print(gr)
+print(gr.groups)
+gr1=group.groupby(['ANSWER','DateTime'])
+print(gr1.groups)
+for ANSWER, group in gr1:
+    print(ANSWER)
+    print(gr1)
+gr2=group.groupby('ANSWER')
+print(gr2.get_group('A'))
+print(gr2.sum())
+print(gr2.mean())
+print(gr2.describe())
+print(gr2.agg('sum','max','mean'))
+
+
+
+# (17)**************************Merge function*****************************************************
+
+
+df1=pd.DataFrame({'ID':[1,2,3,4],'Class':[3,6,2,5]})
+print(df1)
+df2=pd.DataFrame({'ID':[1,2,3,4,5],'Name':['A','B','C','D','E']})
+print(df2)
+print(pd.merge(df1,df2, on='ID'))
+print(pd.merge(df1,df2))
+print(pd.merge(df2,df1, on='ID'))
+print(pd.merge(df1,df2, on='ID', how='inner'))
+print(pd.merge(df1,df2, on='ID', how='left'))
+print(pd.merge(df1,df2, on='ID', how='outer'))
+print(pd.merge(df1,df2, on='ID', how='right'))
+print(df1,df2, on='ID', how='outer',indicator=True)
+df3=pd.DataFrame({'ID':[5,6,7,8],'Name':['A','B','C','D']})
+print(pd.merge(df1,df3, left_index=True , right_index=True))
+df4=pd.DataFrame({'ID':[5,6,7,8],'Name':['A','B','C','D']})
+print(pd.merge(df3,df4,on='ID'))
+print(pd.merge(df3,df4,on='ID',suffixes=('_left','_right')))
+
+
+# (18)**************************Concat function*************************************************
+
+
+con=pd.Series([0,1,2,3])
+con1=pd.Series([4,5,6,7,4])
+print(con)
+print(con1)
+print(pd.concat([con,con1]))
+con2=pd.DataFrame({"ID":[1,2,3,4,5],
+                    "Name":['A','B','C','D','E'],
+                    'Class':[4,6,8,10,12]})
+con3=pd.DataFrame({"ID":[1,2,3,4,5,6],
+                    "Name":['A','B','C','D','E','F'],
+                    'Class':[4,6,8,10,12,14]})
+print(con2)
+print(con3)
+print(pd.concat([con2,con3]))
+print(pd.concat([con2,con3], axis=1))
+print(pd.concat([con2,con3],axis=0, ignore_index=True)) 
+
+
+# (19)************************concat function part 2*********************************************
+
+
+con2=pd.DataFrame({'ID':[1,2,3],'Name':['A','B','C'],'Class':[4,6,8]})
+con3=pd.DataFrame({'ID':[6,8,3,4,6],'Name':['U','G','C','D','E'],'Class':[1,9,8,10,23]})
+con4=pd.DataFrame({'ID':[8,3,4,6,7],'Name':['G','C','D','E','Y'],'Class':[9,8,10,23,12]})
+print(pd.concat([con2,con3],axis=1))
+print(pd.concat([con2,con3],axis=1,join='inner'))
+print(pd.concat([con2,con3],axis=1,join='outer'))
+print(pd.concat([con2,con3],keys=['First DF','Secend DF']))
+print(pd.concat([con2,con3], axis=1,keys=['First DF','Secend DF']))
+print(pd.concat([con2,con3],sort=True))
+con5=pd.DataFrame({'MARKS':[44,45,46]})
+print(pd.concat([con5,con2],sort=False,axis=1))
+print(pd.concat([con5,con2]))
+
+
+
+
+
+
+
+
+
+
+
 
 
 

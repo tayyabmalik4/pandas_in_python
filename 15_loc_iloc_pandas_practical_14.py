@@ -4,7 +4,6 @@
 # /////iloc definition----------------Acces the DataFrame or Serious as a integers of rows or columns by location(step by step or decorate form) is called iloc function
 
 
-from numpy import dtype
 import pandas as pd
 l=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
 
