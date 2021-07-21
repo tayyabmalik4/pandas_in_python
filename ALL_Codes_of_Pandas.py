@@ -1,9 +1,9 @@
-# **************************Pandas****************************
+# (1)**************************Pandas****************************
 # pip install pandas
 import pandas as pd
 import os
 
-# ***************************Series*******************************************
+# (2)***************************Series*******************************************
 
 print(pd.__version__)
 lst=[1,2,-3,6.2,'data values']
@@ -28,7 +28,7 @@ print(ser9+ser10)
 print(ser9+ser11)
 
 
-# *************************DataFrame*************************************************
+# (3)*************************DataFrame*************************************************
 
 df_em=pd.DataFrame([]) 
 df_lst=['a','b','c']
@@ -52,7 +52,7 @@ print(renam)
 print(renam.rename(columns={'ID':'IDs'}))
 
 
-# ***********************************Read CSV and Converting CSV to DataFrame or Series ****************
+# (4)***********************************Read CSV and Converting CSV to DataFrame or Series ****************
 
 # //////csv mean --------------coma seperated values
 # format ---------------------pd.read_csv(file_link)
@@ -61,7 +61,7 @@ print(csv)
 print(os.getcwd())
 
 
-# ********************************Write CSV file**************************************
+# (5)********************************Write CSV file**************************************
 
 wr=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
 print(wr)
@@ -85,25 +85,52 @@ print(wr6.count())
 wr8=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',index_col='QUESTION NO.')
 print(wr8)
 
+# (6)*****************************Write CSV file part 2*************************************
 
+csv1=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(csv1)
+csv2=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',header=3)
+print(csv2)
+csv3=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',header=None)
+print(csv3)
+csv4=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',header=None,prefix='DATA')
+print(csv4)
+csv5=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',names=['Code','Question No','Question','A','B','C','D','Ansers'])
+print(csv5)
 
+# (7)***************************Write CSV file part 3*******************************************
 
+read=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(read)
+print(read.head())
+print(read.head(7))
+print(read.head(3))
+print(read.tail())
+print(read.tail(3))                 
+read1=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',dtype={'QUESTION NO.':'float32'})
+print(read1)            
+read2=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',true_values=['yes'])
+print(read2)
+read3=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',false_values=['No'])
+print(read3)
 
+# (8)***********************Handling Missing Values********************************************
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# https://pandas.pydata.org/docs/getting_started/index.html
+data=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(data)
+data1=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',na_values='COMP3112')
+print(data1)
+data2=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',na_values=['yes','No'])
+print(data2)  
+data3=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',na_values={'QUESTION NO.':'7','QUESTION NO.':'15'})
+print(data3)
+data4=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',keep_default_na=False)
+print(data4)  
+data5=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',na_filter=False)
+print(data5)
+data6=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',na_filter=True)
+print(data6)
 
 
 
