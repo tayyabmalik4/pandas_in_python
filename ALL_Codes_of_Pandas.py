@@ -133,13 +133,96 @@ data6=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\0
 print(data6)
 
 
+# (9)**********************Handling Missing Values part 2**********************************
+
+var=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(var.isnull())
+print(var.isnull().sum())
+print(var.isnull().sum().sum())
+print(var.notnull())
+print(var.notnull().sum())
+print(var.notnull().sum().sum())
 
 
+# (10)********************Handling Missing Values part 3*************************************
+
+csv=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(csv) 
+print(csv.dropna())
+print(csv.dropna(axis=1))
+print(csv.dropna(axis=1,how='any'))
+print(csv.dropna(axis=0,how='any'))
+print(csv.dropna(axis=1, how='all'))
+print(csv.dropna(axis=0,how='all'))
+print(csv.dropna(thresh=9))
+print(csv.dropna(subset=['Date']))
+print(csv.dropna(subset=['time']))
+csv1=csv.dropna(inplace=False)
+print(csv.dropna(inplace=True))
+print(csv)
+
+# (11)*********************Fill the Empty Values using fill function**************************
+
+fill=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(fill)
+print(fill.fillna(value="not available"))
+print(fill.fillna("not available"))
+print(fill.fillna({'Date':'None','time':'No Values'}))
+print(fill.fillna(method='ffill'))
+print(fill.fillna(method='pad'))
+print(fill.fillna(method='bfill'))
+print(fill.fillna(method='backfill'))
+print(fill.fillna(method='ffill',axis=1))
+print(fill.fillna(method='bfill',axis=1))
+print(fill.fillna(method='pad',limit=3))
+print(fill.fillna(method='ffill',inplace=True))
+print(fill)
 
 
+# (12)*******************Replace the empty values using replace function***********************
 
 
+rep=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(rep)
+print(rep.replace('yes','replace it'))
+print(rep.replace(to_replace='yes',value='replace it'))
+print(rep.replace([1,2,3,4,5,6],'*'))
+print(rep.replace([1,2,3,4,5,6],[11,12,13,14,15,16]))
+print(rep.replace({'QUESTION NO.':[1,2,3,4,5,6]},'*'))
+print(rep.replace('[A-Za-z]',786,regex=True))
+print(rep.replace({'A':'[A-Za-z]','B':'[A-Za-z]','C':'[A-Za-z]','D':'[A-Za-z]'},786,regex=True))
+print(rep.replace('yes', method='bfill'))
+print(rep.replace('yes',method='bfill',limit=12))
+rep.replace('yes','Submitted', inplace=True)
+print(rep)
 
+
+# (13)****************Interpolate(fill the values by guassing the next or previous data)********
+
+inter=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(inter)
+print(inter.interpolate())
+print(inter.interpolate(method='linear'))
+print(inter.interpolate(method='time'))
+print(inter.interpolate(method='index'))
+print(inter.interpolate(method='nearest'))
+print(inter.interpolate(method='polynomial',order=1))
+print(inter.interpolate(method='spline',order=1))
+
+
+# (14)*******************Interpolate part 2******************************************************
+
+inter1=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(inter1)
+print(inter1.interpolate())
+print(inter1.interpolate(axis=1))
+print(inter1.interpolate(limit=2,limit_direction='forward')) 
+print(inter1.interpolate(limit_direction='backward')) 
+print(inter1.interpolate(limit_direction='both')) 
+print(inter1.interpolate(limit_area='inside'))
+print(inter1.interpolate(limit_area='outside'))
+print(inter1.interpolate(inplace=True))
+print(inter1)
 
 
 

@@ -18,7 +18,7 @@ import pandas as pd
 # //////////////for simple to check it
 data=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
 # print(data)
-# ///////for the one convered to null
+# ///////if we want to convered the one colums values to null
 data1=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',na_values='COMP3112')
 # print(data1)
 

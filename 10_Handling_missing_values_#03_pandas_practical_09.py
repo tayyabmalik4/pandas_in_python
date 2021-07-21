@@ -57,6 +57,7 @@ csv=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_
 # print(csv.dropna(subset=['time']))
 
 
+
 # /////if we want to replace the empty values csv sheet to csv sheet which are not present in empty values than we use this function-------print(csv.dropna(inplace=)) 
 # csv1=csv.dropna(inplace=False)
 print(csv.dropna(inplace=True))
