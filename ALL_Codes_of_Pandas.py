@@ -365,8 +365,16 @@ print(pd.melt(melt,id_vars=['QUESTION NO.'],value_vars=['Date'],var_name='datee'
 print(pd.melt(melt,id_vars=['QUESTION NO.'],value_vars=['Date'],var_name='datee',value_name='All Data'))
 
 
+# (24)***************************DateTimeIndex**************************************************
 
 
+dat=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(dat)
+print(dat.dtypes)
+print(type(dat.DateTime[0]))
+dat1=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv',parse_dates=['DateTime'])
+print(dat1.dtypes)
+print(type(dat1.DateTime[0]))
 
 
 
