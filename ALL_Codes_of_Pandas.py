@@ -322,16 +322,20 @@ print(pd.concat([con5,con2]))
 
 
 
+# (20)**********************join function*****************************************************\
 
 
-
-
-
-
-
-
-
-
+df1=pd.DataFrame({'A':[1,2,3],'B':[11,12,13]})
+df2=pd.DataFrame({'C':[5,6],'D':[15,16]})
+print(df1.join(df2))
+print(df2.join(df1))
+print(df1.join(df2,how='right'))
+print(df1.join(df2,how='inner'))
+print(df1.join(df2,how='outer'))
+df3=pd.DataFrame({'A':[1,2,3],'B':[11,12,13]})
+df4=pd.DataFrame({'A':[5,6],'D':[15,16]})
+print(df3.join(df4, lsuffix='_1'))
+print(df3.join(df4, rsuffix="- 2"))
 
 
 
