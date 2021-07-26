@@ -45,8 +45,8 @@ print(pd.DataFrame(df_lst_dict))
 df_ser={"ID":pd.Series([1,2,3,4]),"Name":pd.Series(["Junaid","Zahid","Tayyab","Osama"])}
 print(df_ser)
 print(pd.DataFrame(df_ser))
-del df_ser
 print(df_ser)
+del df_ser
 renam=pd.DataFrame({'ID':[1,2,3,4,5],'Name':['A','B','C','D','E']})
 print(renam)
 print(renam.rename(columns={'ID':'IDs'}))
@@ -338,7 +338,20 @@ print(df3.join(df4, lsuffix='_1'))
 print(df3.join(df4, rsuffix="- 2"))
 
 
+# *******************************pivot_table *************************************************
 
+csv=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(csv)
+print(csv.pivot_table(index='num'))
+print(csv.pivot_table(index='num',columns='ANSWER'))
+print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='count'))
+print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='sum'))
+print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='max'))
+print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='min'))
+print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='min',fill_value=12))
+print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='std'))
+print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='min',fill_value=12))
+print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='min',fill_value=12,margins=True))
 
 
 
