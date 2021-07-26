@@ -56,6 +56,8 @@ print(renam)
 print(renam.rename(columns={'ID':'IDs'}))
 
 
+# /////when we want to dataframe converts to csv file than we use this function
+df_to_csv=renam.to_csv('rename_file.csv')
 
 
 

@@ -50,6 +50,7 @@ del df_ser
 renam=pd.DataFrame({'ID':[1,2,3,4,5],'Name':['A','B','C','D','E']})
 print(renam)
 print(renam.rename(columns={'ID':'IDs'}))
+df_to_csv=renam.to_csv('rename_file.csv')
 
 
 # (4)***********************************Read CSV and Converting CSV to DataFrame or Series ****************
