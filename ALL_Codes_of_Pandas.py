@@ -354,4 +354,32 @@ print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='min',fill_value=12))
 print(csv.pivot_table(index='num',columns='ANSWER',aggfunc='min',fill_value=12,margins=True))
 
 
+# (23)****************************Melt() function********************************************
+
+melt=pd.read_csv('F:\\tayyab programming\\machine learning\\pandaswithtayyab\\05_using_write_the_csv_file_merge-sort.csv')
+print(melt)
+print(pd.melt(melt))
+print(pd.melt(melt,id_vars=['QUESTION NO.','Date']))
+print(pd.melt(melt,id_vars=['QUESTION NO.'],value_vars=['Date']))
+print(pd.melt(melt,id_vars=['QUESTION NO.'],value_vars=['Date'],var_name='datee'))
+print(pd.melt(melt,id_vars=['QUESTION NO.'],value_vars=['Date'],var_name='datee',value_name='All Data'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
