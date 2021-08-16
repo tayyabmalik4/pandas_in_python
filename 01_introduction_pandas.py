@@ -3,6 +3,13 @@
 # //////////A fast and efficient dataframe object for data manipulation.
 # /////////OPEN sourse
 
+# ------------pandas is a software library written for the Python programming language for data manipulation and analysis. In particular, it offers data structures and operations for manipulating numerical tables and time series. It is free software released under the three-clause BSD license. Wikipedia
+# ------------Original author(s): Wes McKinney
+# ------------Written in: Python, Cython, C
+# ------------Developer(s): Community
+# ------------License: New BSD License
+# ------------Initial release: 11 January 2008; 13 years ago
+
 # ////////Row data to converted good data and is helping in pandas in python
 # 
 # 
